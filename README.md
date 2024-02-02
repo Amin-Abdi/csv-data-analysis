@@ -24,13 +24,15 @@ Test Suite: Includes a test suite using Jest for ensuring the correctness of fun
     npm install
 ```
 
-4. Navigate to the src directory to run the program:
+4. Create a data folder to hold your csv file, just like the sample folder adn replace file1Path and file2Path with the paths to your two csv files.
+
+5. Navigate to the src directory to run the program:
 ```bash
     cd src
     node app.js
 ```
 
-5. To run the test, make sure you are in the root directory, then run 
+6. To run the test, make sure you are in the root directory, then run 
 ```bash
     npm run test
 ```
