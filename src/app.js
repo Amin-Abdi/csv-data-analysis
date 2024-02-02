@@ -1,6 +1,6 @@
 const fs = require('fs');
 const csv = require('csv-parser');
-const {getCountMap, getTotalOverlapCount, getComparisonResults} = require('./utils.js');
+const {getComparisonResults} = require('./utils.js');
 
 // const file1Path = '../sample/a.csv';
 // const file2Path = '../sample/b.csv';

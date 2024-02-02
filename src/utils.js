@@ -1,3 +1,4 @@
+//Returns a map to represent the number of occurrences for each unique key.
 function getCountMap(data) {
     return data.reduce((countMap, key) => {
         countMap[key] = (countMap[key] || 0) + 1;
@@ -17,10 +18,6 @@ function getTotalOverlapCount(countMap1, countMap2){
     return totalOverlapCount;
 }
 
-function add(a, b) {
-    return a + b;
-}
-
 function getComparisonResults(data1, data2) {
     const countFile1 = data1.length;
     const countFile2 = data2.length;
@@ -30,11 +27,10 @@ function getComparisonResults(data1, data2) {
     //Creating a set out of the data so I can take advantage of the constant-time lookups
     const data2Set = new Set(data2);
     const distinctOverlapCount = new Set(data1.filter((key) => data2Set.has(key))).size;
-      
-    //Create a map to represent the number of occurrences for each unique key.
+
     const countMap1 = getCountMap(data1);
     const countMap2 = getCountMap(data2);
-    
+
     //calculates the overlap using both maps.
     const totalOverlapCount = getTotalOverlapCount(countMap1, countMap2);
 
@@ -50,4 +46,4 @@ function getComparisonResults(data1, data2) {
   
 
 
-module.exports = {getCountMap, getTotalOverlapCount, add, getComparisonResults};
+module.exports = {getCountMap, getTotalOverlapCount, getComparisonResults};
