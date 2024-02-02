@@ -1,4 +1,4 @@
-const {getCountMap, getTotalOverlapCount, add} = require("../src/utils");
+const {getCountMap, getTotalOverlapCount, getComparisonResults} = require("../src/utils");
 
 describe('Data Processing functions', () => {
 
@@ -26,4 +26,21 @@ describe('Data Processing functions', () => {
             expect(totalOverlapCount).toBe(11);
         });
     });
+    
+    describe('compareDatasets', () => {
+        it('Compare datasets', async() => {
+            const comparison = getComparisonResults(dataset1, dataset2);
+            const expectedComparison = {
+                countFile1: 8,
+                countFile2: 9,
+                distinctCountFile1: 6,
+                distinctCountFile2: 6,
+                distinctOverlapCount: 4,
+                totalOverlapCount: 11
+            };
+            expect(comparison).toMatchObject(expectedComparison);
+        })
+    })
+
+
 })
