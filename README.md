@@ -1,20 +1,36 @@
-The program should perform the following:
+# Compare-Datasets
 
-● Allow specification of the files to process
-● Calculate and display the following:
-- The count of the keys in each file
-- The count of the distinct keys in each file
-- The count of the overlap of all keys between the files (total overlap)
-- The count of the overlap of distinct keys between the two files (distinct overlap)
+This project provides a utility for comparing two datasets obtained from CSV files. It includes functions to read CSV files, analyze the datasets, and generate comparison results. The comparison results include The count of the keys in each file, The count of the distinct keys in each file, The count of the overlap of all keys between the files (total overlap), and The count of the overlap of distinct keys between the two files (distinct overlap).
 
-
-Additional considerations
-- The program should be able to handle different files in csv format
-- Consider how the program would work with larger files both in terms of number of
-rows/columns of data and number of unique key values
-- If approximations are used, ensure the accuracy of the values is appropriately represented
-- How you would validate the above requirements are met  //TODO unit tests
-- Feel free to ask any questions about this task
+## Features
+CSV Reader: Reads data from CSV files asynchronously.
+Dataset Comparison: Compares two datasets and provides counts of data points, distinct values, and overlapping values.
+Test Suite: Includes a test suite using Jest for ensuring the correctness of functions.
 
 
-- fs.readFile will load the entire file into memory, but fs.createReadStream will read the file in chunks of the size you specify.
+## Getting Started
+1. Clone the repository:
+```bash
+   git clone https://github.com/Amin-Abdi/csv-data-analysis.git
+```
+
+2. Navigate to the project directory:
+```bash
+    cd csv-project
+```
+
+3. Install dependencies:
+```bash
+    npm install
+```
+
+4. Navigate to the src directory to run the program:
+```bash
+    cd src
+    node app.js
+```
+
+5. To run the test, make sure you are in the root directory, then run 
+```bash
+    npm run test
+```
