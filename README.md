@@ -36,3 +36,17 @@ Test Suite: Includes a test suite using Jest for ensuring the correctness of fun
 ```bash
     npm run test
 ```
+
+
+## Example
+When the program is run against the sample csv file, the following should be the output
+```
+{
+  countFile1: 8,
+  countFile2: 9,
+  distinctCountFile1: 6,
+  distinctCountFile2: 6,
+  distinctOverlapCount: 4,
+  totalOverlapCount: 11
+}
+```
